@@ -1,0 +1,5 @@
+examples_data/*
+resources_dataset/*
+dataset.csv
+muestra_dataset.csv
+users_age_gender.csv
