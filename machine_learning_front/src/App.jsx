@@ -113,7 +113,6 @@ const App = () => {
         </div>
 
         <div className="grid">
-          {/* Panel de Selección */}
           <div className="card">
             <div className="card-header">
               <Calendar className="card-icon card-icon-blue" />
@@ -147,7 +146,6 @@ const App = () => {
             )}
           </div>
 
-          {/* Panel de Resultados */}
           <div className="card">
             <div className="card-header">
               <TrendingUp className="card-icon card-icon-green" />
@@ -219,7 +217,6 @@ const App = () => {
           </div>
         </div>
 
-        {/* Información adicional */}
         <div className="system-info">
           <h3>Información del Sistema</h3>
           <div className="features-grid">
