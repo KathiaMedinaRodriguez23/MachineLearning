@@ -1,4 +1,3 @@
-// App.js
 import React, { useState } from 'react';
 import { Calendar, Zap, TrendingUp } from 'lucide-react';
 import './App.css'; // Importa los estilos
@@ -65,8 +64,6 @@ const App = () => {
     });
   } catch (error) {
     console.error('Error obteniendo la predicción:', error);
-    // Aquí podrías setear un estado de error si tienes uno:
-    // setError(error.message);
   } finally {
     setLoading(false);
   }
