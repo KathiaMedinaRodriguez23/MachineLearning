@@ -33,6 +33,7 @@ const App = () => {
   setLoading(true);
 
   try {
+    // Llamada a la API para obtener la predicción
     const response = await fetch(
       'https://prediccion-de-consumo-electrico.onrender.com/predict',
       {
@@ -56,6 +57,7 @@ const App = () => {
       throw new Error(`Error en la petición: ${response.status}`);
     }
 
+    // Procesar la respuesta
     const data = await response.json();
     console.log('Predicción obtenida:', data)
     setPrediction({
@@ -69,6 +71,7 @@ const App = () => {
   }
 };
 
+// Manejar la selección del mes
   const handleMonthSelect = async (monthValue) => {
     console.log('Mes seleccionado:', monthValue);
     setSelectedMonth(monthValue);
@@ -79,6 +82,7 @@ const App = () => {
     }
   };
 
+  // Obtener el nombre del mes
   const getMonthName = (monthNum) => {
     if (monthNum <= 12) {
       return monthNames[monthNum];
@@ -86,6 +90,7 @@ const App = () => {
     return monthNames[monthNum - 12] + ' (2026)';
   };
 
+  // Obtener información estacional
   const getSeasonalInfo = (month) => {
     const summerMonths = [12, 1, 2, 3];
     const winterMonths = [6, 7, 8, 9];
